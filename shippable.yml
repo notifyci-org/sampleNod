@@ -1,4 +1,5 @@
 language: node_js
+
 services:
   - mysql
   - postgres
@@ -8,7 +9,6 @@ services:
   - mongodb
   - rabbitmq
   
-
 # Version number
 node_js:
   - 0.10
@@ -18,7 +18,6 @@ node_js:
   - iojs-v2
   - iojs-v3
   - 5.0
-
 
 build:
   ci:
