@@ -19,3 +19,4 @@ build:
     image_name: drydock/u12nod
     image_tag: prod
     pull: true  
+ 
