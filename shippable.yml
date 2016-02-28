@@ -10,6 +10,7 @@ services:
   - neo4j
   - couchdb
   - rethinkdb
+  
 # Version number
 node_js:
   - 0.10
@@ -20,12 +21,6 @@ node_js:
   - iojs-v3
   - 5.0
 
-
 build:
   ci:
     - node --version
-    
-  pre_ci_boot:
-    image_name: drydock/u14nodall
-    image_tag: prod
-    pull: true  
