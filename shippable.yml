@@ -2,13 +2,13 @@ language: node_js
 
 # Version number
 node_js:
- # - 0.10
+  - 0.10
   - 0.12
- # - 4.2.3
-  #- iojs-v1
- # - iojs-v2
- # - iojs-v3
-#  - 5.0
+  - 4.2.3
+  - iojs-v1
+  - iojs-v2
+  - iojs-v3
+  - 5.0
 
 env:
   global:
@@ -19,10 +19,10 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_sample_nod .
+    - docker build -t=shippabledocker/shiphitchcock1_sample_nod_unofficial .
 
   pre_ci_boot:
-    image_name: shippabledocker/shiphitchcock1_sample_nod
+    image_name: shippabledocker/shiphitchcock1_sample_nod_unofficial
     image_tag: latest
     pull: false
     options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -33,7 +33,7 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker push shippabledocker/shiphitchcock1_sample_nod
+    - docker push shippabledocker/shiphitchcock1_sample_nod_unofficial
 
 integrations:
   hub:
