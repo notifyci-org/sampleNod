@@ -33,7 +33,8 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker push shippabledocker/pipeline:latest.2
+    - docker build -t=shippabledocker/pipeline:$BRANCH.$BUILD_NUMBER .
+    - docker push shippabledocker/pipeline:$BRANCH.$BUILD_NUMBER
 
 integrations:
   hub:
