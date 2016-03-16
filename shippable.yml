@@ -33,7 +33,7 @@ build:
    # - ls -al 
 
   post_ci:
-    - docker push shippabledocker/pipeline:latest.2
+    - docker push shippabledocker/pipeline
 
 integrations:
   hub:
