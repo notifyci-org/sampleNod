@@ -17,14 +17,14 @@ env:
     - FOO=FUBU
 
   matrix:
-    - M1=ONE
+    - M1=ONE  
 
 build:
   pre_ci:
     - docker build -t=shippabledocker/shiphitchcock1_testsamplenode2 .
 
   pre_ci_boot:
-      image_name: shippabledocker/shiphitchcock1_testsamplenode2
+      image_name: shippabledocker/shiphitchcock1_testsamplenode
       image_tag: latest
       pull: false
   #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -33,7 +33,7 @@ build:
     - node --version  
     - ps -eax
     - ls -al 
-   # - sleep 5m
+    - sleep 3m
 
   post_ci:
     - docker push shippabledocker/shiphitchcock1_testsamplenode2
