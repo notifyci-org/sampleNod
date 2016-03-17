@@ -10,6 +10,8 @@ node_js:
   #- iojs-v3
   #- 5.0
 
+timeout: 2
+
 env:
   global:
     - FOO=FUBU
@@ -31,6 +33,7 @@ build:
     - node --version  
     - ps -eax
     - ls -al 
+   # - sleep 5m
 
   post_ci:
     - docker push shippabledocker/shiphitchcock1_testsamplenode
