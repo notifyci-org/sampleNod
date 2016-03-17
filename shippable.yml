@@ -21,10 +21,10 @@ env:
 
 build:
   pre_ci:
-    - docker build -t=shippabledocker/shiphitchcock1_testsamplenode .
+    - docker build -t=shippabledocker/shiphitchcock1_testsamplenode2 .
 
   pre_ci_boot:
-      image_name: shippabledocker/shiphitchcock1_testsamplenode
+      image_name: shippabledocker/shiphitchcock1_testsamplenode2
       image_tag: latest
       pull: false
   #  options: '--privileged=true --net=bridge -e FOO=true -e BOO=false'
@@ -36,7 +36,7 @@ build:
    # - sleep 5m
 
   post_ci:
-    - docker push shippabledocker/shiphitchcock1_testsamplenode
+    - docker push shippabledocker/shiphitchcock1_testsamplenode2
 
 integrations:
   hub:
