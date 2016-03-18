@@ -3,15 +3,32 @@ language: node_js
 # Version number
 node_js:
   - 0.10
-#  - 0.12
- # - 4.2.3
-  #- iojs-v1
-  #- iojs-v2
-  #- iojs-v3
-  #- 5.0
-
-#timeout: 5
+  - 0.12
+  - 4.2.3
+  - iojs-v1
+  - iojs-v2
+  - iojs-v3
+  - 5.0
 
 build:
   ci:
     - node --version
+    
+  pre_ci_boot:
+    image_name: shippable/minv2
+    image_tag: prod
+    pull: false
+
+services:
+  - rabbitmq
+  - rethinkdb
+  - couchdb
+  - neo4j
+  - mysql
+  - postgres 
+  - mongodb
+  - elasticsearch
+  - redis
+  - memcache
+  
+ 
