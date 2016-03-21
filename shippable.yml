@@ -15,3 +15,5 @@ node_js:
 build:
   ci:
     - node --version
+    - ps -eax
+    - ls -al
